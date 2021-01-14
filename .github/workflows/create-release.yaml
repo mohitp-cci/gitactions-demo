@@ -1,15 +1,20 @@
 name: start release process
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name of branch"
+        required: true
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: Check out code
+    #     uses: actions/checkout@v2
 
 #       - name: Bump version and push tag
 #         id: tag_version

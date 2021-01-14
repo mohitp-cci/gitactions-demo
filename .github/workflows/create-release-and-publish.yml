@@ -1,15 +1,21 @@
 name: create release and publish
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name of branch"
+        required: true
+
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: Check out code
+    #     uses: actions/checkout@v2
 
       # - name: Semantic Release
       #   uses: cycjimmy/semantic-release-action@v2
