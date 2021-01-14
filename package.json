@@ -1,14 +1,23 @@
 {
   "name": "gitactions-demo",
-  "version": "1.0.0",
+  "version": "0.4.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohitp-cci/gitactions-demo.git"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "semantic-release": "^17.1.1"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0"
   },
   "author": "",
   "license": "ISC",
