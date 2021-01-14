@@ -1,8 +1,8 @@
 name: create release and publish
 on:
-  # push:
-  #   branches:
-  #     - beta
+  push:
+    branches:
+      - beta
 
 jobs:
   build:
