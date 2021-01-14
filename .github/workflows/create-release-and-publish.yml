@@ -16,6 +16,7 @@ jobs:
         id: semantic # Need an `id` for output variables
         with:
           dry_run: true
+          branch: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
