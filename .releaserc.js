@@ -19,7 +19,7 @@ module.exports = {
         }]
     ],
     branches: [
-        'master',
+        'main',
         {
             name: 'feat/*',
             prerelease: 'alpha'
