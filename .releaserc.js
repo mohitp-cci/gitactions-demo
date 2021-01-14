@@ -24,7 +24,8 @@ module.exports = {
             name: 'feature/*',
             prerelease: true
         },
-        { name: 'beta', prerelease: true }
+        { name: 'beta', prerelease: true },
+        {name: 'alpha', prerelease: true}
     ],
     preset: 'angular'
 }
