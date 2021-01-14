@@ -27,8 +27,8 @@ jobs:
           body: ${{ steps.tag_version.outputs.changelog }}
 
        - name: Create pull request for develop branch
-        uses: repo-sync/pull-request@v2
-        with:
+         uses: repo-sync/pull-request@v2
+         with:
           id: open-develop-pr
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: master
