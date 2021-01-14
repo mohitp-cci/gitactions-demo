@@ -1,8 +1,8 @@
-# name: start release process
-# on:
-#   push:
-#     branches:
-#       - main
+name: start release process
+on:
+  push:
+    branches:
+      - main
 
 # jobs:
 #   build:
