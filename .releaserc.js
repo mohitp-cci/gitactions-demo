@@ -21,7 +21,7 @@ module.exports = {
     branches: [
         'main',
         {
-            name: 'feat/*',
+            name: 'feature/*',
             prerelease: 'alpha'
         }
     ],
