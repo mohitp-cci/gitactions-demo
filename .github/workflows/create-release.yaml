@@ -17,7 +17,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create a GitHub releaseF
+      - name: Create a GitHub release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
           destination_branch: develop
           pr_title: ${{ steps.tag_version.outputs.new_tag }} into develop
           pr_body: |
-            ${{ steps.tag_version.outputs.changelog }}
+            This is an automated PR to merge the master changes into develop.
           pr_label: "automated pr"
 
       - name: output-url
