@@ -3,11 +3,8 @@ on:
   # push:
   #   branches:
   #     - main
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Name of branch"
-        required: true
+  branches-ignore:
+    - "**"
 
 jobs:
   build:

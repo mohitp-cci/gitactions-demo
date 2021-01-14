@@ -1,4 +1,4 @@
-name: create release and publish
+name: beta release
 on:
   # push:
   #   branches:
