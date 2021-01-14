@@ -31,7 +31,7 @@ jobs:
         with:
           id: open-develop-pr
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_branch: master
+          source_branch: main
           destination_branch: develop
           pr_title: ${{ steps.tag_version.outputs.new_tag }} into develop
           pr_body: |
