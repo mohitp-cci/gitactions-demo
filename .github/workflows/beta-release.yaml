@@ -1,8 +1,13 @@
 name: create release and publish
 on:
-  push:
-    branches:
-      - beta
+  # push:
+  #   branches:
+  #     - beta
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Name of branch"
+        required: true
 
 jobs:
   build:
