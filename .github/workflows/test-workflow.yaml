@@ -1,10 +1,9 @@
 name: test workflow
 on:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: "Name of branch"
-        required: true
+  push:
+    branches:
+      - beta
+
 
 jobs:
   build:
@@ -17,22 +16,8 @@ jobs:
         uses: cycjimmy/semantic-release-action@v2
         id: semantic # Need an `id` for output variables
         with:
-          dry_run: false
-          branches: |
-            [
-              '+([0-9])?(.{+([0-9]),x}).x',
-              'master', 
-              'next', 
-              'next-major', 
-              {
-                name: 'beta', 
-                prerelease: true
-              }, 
-              {
-                name: 'alpha', 
-                prerelease: true
-              }
-            ]
+          dry_run: true
+          branch: beta
 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
