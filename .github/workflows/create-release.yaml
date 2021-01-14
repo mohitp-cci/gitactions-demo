@@ -17,7 +17,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create a GitHub release
+      - name: Create a GitHub releaseF
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -26,16 +26,16 @@ jobs:
           release_name: Release ${{ steps.tag_version.outputs.new_tag }}
           body: ${{ steps.tag_version.outputs.changelog }}
 
-       - name: Create pull request for develop branch
-         uses: repo-sync/pull-request@v2
-         with:
+      - name: Create pull request for develop branch
+        uses: repo-sync/pull-request@v2
+        with:
           id: open-develop-pr
           github_token: ${{ secrets.GITHUB_TOKEN }}
           source_branch: master
           destination_branch: develop
           pr_title: ${{ steps.tag_version.outputs.new_tag }} into develop
           pr_body: |
-           ${{ steps.tag_version.outputs.changelog }}
+            ${{ steps.tag_version.outputs.changelog }}
           pr_label: "automated pr"
 
       - name: output-url
