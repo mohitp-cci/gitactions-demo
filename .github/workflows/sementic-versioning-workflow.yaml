@@ -2,7 +2,7 @@ name: sementic versioning workflow
 
 on:
   push:
-    branches: [ main, feature/*, beta ]
+    branches: [ main, feature/*, beta, alpha ]
 
 jobs:
   creating-sementic-version:
