@@ -5,7 +5,7 @@ on:
     branches: [ main, feature/*, beta ]
 
 jobs:
-  creating sementic version:
+  creating-sementic-version:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
