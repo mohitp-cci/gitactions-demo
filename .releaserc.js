@@ -27,5 +27,4 @@ module.exports = {
         { name: 'beta', prerelease: true, channel: 'beta' },
         { name: 'alpha', prerelease: true }
     ],
-    // preset: 'angular'
 }
