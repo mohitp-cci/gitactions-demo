@@ -1,11 +1,11 @@
-name: Hello World
+name: sementic versioning workflow
 
 on:
   push:
     branches: [ main, feature/*, beta ]
 
 jobs:
-  Test:
+  creating-sementic-version:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
